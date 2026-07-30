@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# install as a root user on the server.
+
 echo "removing conflicting packages"
 
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc docker-buildx podman-docker containerd runc | cut -f1)
@@ -23,4 +25,5 @@ EOF
 
 sudo apt update
 
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-
+
